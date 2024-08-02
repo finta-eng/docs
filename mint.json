@@ -24,12 +24,6 @@
       "url": "mailto:support@finta.com"
     }
   ],
-  "topbarLinks": [
-    {
-      "name": "Support2",
-      "url": "mailto:support@finta.com"
-    }
-  ],
   "topbarCtaButton": {
     "name": "Finta",
     "url": "https://www.finta.com"
@@ -82,6 +76,7 @@
   ],
   "footerSocials": {
     "twitter": "https://x.com/finta",
-    "linkedin": "https://www.linkedin.com/company/finta"
+    "linkedin": "https://www.linkedin.com/company/finta",
+    "website": "https://www.finta.com"
   }
 }
