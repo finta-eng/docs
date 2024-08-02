@@ -4,7 +4,11 @@
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
+
+
   "favicon": "/favicon.png",
+
+
   "colors": {
     "primary": "#2679F3",
     "light": "#2679F3",
@@ -12,34 +16,42 @@
     "background": {
       "dark": "#161B23"
     },
+    
     "anchors": {
       "from": "#D5D8DB",
       "to": "#2B45C1"
     }
   },
+
+
   "topbarLinks": [
     {
       "name": "Support",
       "url": "mailto:support@finta.com"
     }
   ],
+
+
   "topbarCtaButton": {
     "name": "Finta",
     "url": "https://www.finta.com"
   },
   
   
-  "primaryTab": {
-    "name": "Primary Tab"
-  },
 
 
   "tabs": [
+    {
+      "name": "Tab 1",
+      "url": "essentials"
+    }
     {
       "name": "Tab 2",
       "url": "api-reference"
     }
   ],
+
+
   "anchors": [
     {
       "name": "Anchor 1",
@@ -52,6 +64,8 @@
       "url": "https://mintlify.com/community"
     }
   ],
+
+
   "navigation": [
     {
       "group": "Section 1",
@@ -69,11 +83,13 @@
     }
   ],
 
+
   "footerSocials": {
     "x": "https://x.com/finta",
     "linkedin": "https://www.linkedin.com/company/finta",
     "website": "https://www.finta.com"
   },
+
 
   "feedback": {
     "thumbsRating": true,
