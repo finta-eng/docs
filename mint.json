@@ -42,21 +42,10 @@
 
   "tabs": [
     {
-      "name": "Tab 1",
-      "url": "essentials"
-    },
-    {
       "name": "Tab 2",
       "url": "api-reference"
-    },
-    {
-      "name": "Tab 3",
-      "url": "api-reference"
-    },
-    {
-      "name": "Tab 4",
-      "url": "api-reference"
     }
+
   ],
 
 
