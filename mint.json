@@ -42,10 +42,9 @@
 
   "tabs": [
     {
-      "name": "Tab 2",
+      "name": "API",
       "url": "api-reference"
     }
-
   ],
 
 
