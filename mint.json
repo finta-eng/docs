@@ -76,9 +76,9 @@
   },
 
   "feedback": {
-    "thumbsRating": "true",
-    "suggestEdit": "false",
-    "raiseIssue": "true"
+    "thumbsRating": true,
+    "suggestEdit": false,
+    "raiseIssue": true
   }
   
 }
