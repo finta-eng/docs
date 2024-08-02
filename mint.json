@@ -72,8 +72,16 @@
         "pages": ["api-reference/authentication"]
     },
     {
-        "group": "Section 1 of API",
-        "pages": ["quickstart"]
+        "group": "Section 2 of API",
+        "pages": ["api-reference/endpoint/",
+            {
+                "group": "Endpoint",
+                "pages": ["api-reference/endpoint/create"
+                          , "api-reference/endpoint/delete"
+                          , "api-reference/endpoint/get"
+                          , "api-reference/endpoint/update"]
+            }
+        ]
     }
   ],
 
