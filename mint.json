@@ -69,7 +69,7 @@
     },
     {
         "group": "API",
-        "pages": ["api-reference/authentication.mdx"]
+        "pages": ["api-reference/authentication"]
     }
   ],
 
