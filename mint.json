@@ -7,20 +7,26 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#9563FF",
-    "light": "#AE87FF",
-    "dark": "#0D001D",
+    "primary": "#2679F3",
+    "light": "#E3F3FF",
+    "dark": "#161B23",
     "background": {
-      "dark": "#090014"
+      "dark": "#161B23"
     },
     "anchors": {
-      "from": "#FF7F57",
-      "to": "#9563FF"
+      "from": "#D5D8DB",
+      "to": "#2B45C1"
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
+      "url": "mailto:support@finta.com"
+    }
+  ],
+  "topbarLinks": [
+    {
+      "name": "Support2",
       "url": "mailto:support@finta.com"
     }
   ],
