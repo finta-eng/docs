@@ -78,5 +78,11 @@
     "x": "https://x.com/finta",
     "linkedin": "https://www.linkedin.com/company/finta",
     "website": "https://www.finta.com"
+  },
+  "feedback": {
+    "thumbsRating": "true",
+    "suggestEdit": "false",
+    "raiseIssue": "true"
   }
+  
 }
