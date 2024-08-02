@@ -78,7 +78,7 @@
   "feedback": {
     "thumbsRating": true,
     "suggestEdit": false,
-    "raiseIssue": true
+    "raiseIssue": false
   }
   
 }
