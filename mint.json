@@ -50,37 +50,19 @@
   "navigation": [
     {
       "group": "Section 1",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["1.1_introduction", "1.2_development"]
     },
     {
       "group": "Section 2",
       "pages": [
-            "quickstart",
+            "1.1_introduction",
             {
                 "group": "Section 2.1",
-                "pages": ["introduction", "quickstart", "development"]
+                "pages": ["introduction", "development"]
             }
         ]
     },
-    {
-        "group": "Section 1 of API",
-        "pages": ["api-reference/authentication"]
-    },
-    {
-        "group": "Section 2 of API",
-        "pages": ["api-reference/endpoint/",
-            {
-                "group": "Endpoint",
-                "pages": ["api-reference/endpoint/create"
-                          , "api-reference/endpoint/delete"
-                          , "api-reference/endpoint/get"
-                          , "api-reference/endpoint/update"]
-            }
-        ]
-    }
   ],
-
-
 
 
 
