@@ -1,19 +1,21 @@
+# Company name and logo
   {
-  "name": "Finta",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "name": "Finta",
+    "logo": {
+      "dark": "/logo/dark.svg",
+      "light": "/logo/light.svg"
   },
 
-
+# Favicon
   "favicon": "/favicon.png",
 
-
+# System settings
   "modeToggle": {
   "default": "light",
   "isHidden": true
   },
 
+# Colors
   "colors": {
     "primary": "#2679F3",
     "light": "#2679F3",
@@ -28,7 +30,7 @@
     }
   },
 
-
+# Top links  
   "topbarLinks": [
     {
       "name": "Support",
@@ -37,13 +39,14 @@
   ],
 
 
+# CTA
   "topbarCtaButton": {
     "name": "Finta",
     "url": "https://www.finta.com"
   },
   
   
-
+# Tabs
 
   "tabs": [
     {
@@ -52,10 +55,14 @@
     }
   ],
 
+# Primary tab
   "primaryTab": {
     "name": "Home"
   },
 
+
+
+# Navigation    
 
   "navigation": [
     {
@@ -90,6 +97,8 @@
     }
   ],
 
+
+# Anchors
   "anchors": [
     {
       "name": "Anchor 1",
@@ -104,7 +113,7 @@
   ],
 
 
-
+# Footer socials
 
 
   "footerSocials": {
@@ -114,10 +123,12 @@
   },
 
 
+# Feedback
+    
   "feedback": {
     "thumbsRating": true,
-    "suggestEdit": false,
-    "raiseIssue": false
+    "suggestEdit": true,
+    "raiseIssue": true
   }
   
 }
