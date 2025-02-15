@@ -1,14 +1,22 @@
 {
+
+  
   "name": "Finta",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
+
+  
   "favicon": "/favicon.png",
+
+  
   "modeToggle": {
     "default": "light",
     "isHidden": true
   },
+
+  
   "colors": {
     "primary": "#2679F3",
     "light": "#2679F3",
@@ -22,16 +30,21 @@
       "to": "#2B45C1"
     }
   },
+
+  
   "topbarLinks": [
     {
       "name": "Support",
       "url": "mailto:support@finta.com"
     }
   ],
+
+  
   "topbarCtaButton": {
     "name": "Finta",
     "url": "https://www.finta.com"
   },
+  
   "navigation": [
     {
       "group": "Section 1",
@@ -48,12 +61,18 @@
       ]
     }
   ],
+  
   "footerSocials": {
     "x": "https://x.com/finta",
     "linkedin": "https://www.linkedin.com/company/finta",
     "website": "https://www.finta.com"
   },
+
+  
   "feedback": {
     "thumbsRating": true,
     "suggestEdit": true,
-    
+  }
+
+  
+}
