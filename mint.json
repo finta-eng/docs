@@ -33,21 +33,7 @@
       "to": "#2B45C1"
     }
   },
-
-  
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:support@finta.com"
-    }
-  ],
-
-  
-  "topbarCtaButton": {
-    "name": "Finta",
-    "url": "https://www.finta.com"
-  },
-  
+ 
   "navigation": [
     {
       "group": "Section 1",
