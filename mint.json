@@ -22,7 +22,7 @@
     "light": "#2679F3",
     "dark": "#ECF2FF",
     "background": {
-      "light": "#E7E7E9",
+      "light": "#FFF",
       "dark": "#646464"
     },
     "anchors": {
