@@ -20,7 +20,7 @@
   "colors": {
     "primary": "#2679F3",
     "light": "#2679F3",
-    "dark": "#ECF2FF",
+    "dark": "#2679F3",
     "background": {
       "light": "#FFF",
       "dark": "#646464"
