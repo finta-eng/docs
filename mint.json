@@ -34,14 +34,20 @@
     }
   },
 
-  
-  
-  "navigation": [
+   "anchors": [
     {
       "name": "Overview",
       "icon": "map",
       "url": "/overview"
     },
+    {
+      "name": "Anchor 2",
+      "icon": "slack",
+      "url": "https://mintlify.com/community"
+    }
+  ],
+  
+  "navigation": [
     {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
