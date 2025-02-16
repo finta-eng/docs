@@ -34,16 +34,20 @@
     }
   },
 
-  "anchors": [
-    {
-      "name": "Overview",
-      "icon": "map",
-      "url": "/overview"
-    }
-  ],
+
 
   
   "navigation": [
+    {
+      "group": "Anchors",
+      "pages": [
+        {
+          "name": "Overview",
+          "icon": "map",
+          "url": "/overview"
+        }
+      ]
+    },
     {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
