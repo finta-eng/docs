@@ -49,9 +49,9 @@
 
 
   "feedback": {
-    "thumbsRating": false,
+    "thumbsRating": true,
     "suggestEdit": false,
-    "raiseIssue": false
+    "raiseIssue": true
   }
 
   
