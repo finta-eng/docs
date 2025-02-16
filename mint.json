@@ -46,9 +46,9 @@
       "url": "https://mintlify.com/community"
     },
     {
-      "anchor": "Overview",
+      "name": "Overview",
       "icon": "map",
-      "pages": "overview"      
+      "url": "overview"      
     }
   ],
   
