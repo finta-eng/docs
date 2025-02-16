@@ -36,19 +36,19 @@
 
    "anchors": [
     {
-      "name": "Overview",
+      "name": "Overview1",
       "icon": "map",
       "url": "/overview"
     },
     {
-      "name": "Overview",
+      "name": "Overview2",
       "icon": "map",
-      "url": "https://mintlify.com/community"
+      "url": "/overview"
     },
     {
-      "name": "Overview",
+      "name": "Overview3",
       "icon": "map",
-      "url": "overview"      
+      "url": "/overview"      
     }
   ],
   
