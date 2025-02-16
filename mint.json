@@ -54,6 +54,11 @@
   
   "navigation": [
     {
+      "anchor": "Overview3",
+      "icon": "map",
+      "pages": "overview"
+    },
+    {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
     },
