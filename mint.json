@@ -38,15 +38,15 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["0_overview"]
+      "pages": ["overview"]
     },
     {
       "group": "Tax Compliance",
-      "pages": ["1.1_1099", "1.2_delaware", "1.3_incometax", "1.4_credits"]
+      "pages": ["1099", "delaware", "incometax", "credits"]
     },
     {
       "group": "Best Practices",
-      "pages": ["2.1_stack", "2.2_receipts", "2.3_reimbursements", "2.4_expenses"]
+      "pages": ["stack", "receipts", "reimburse", "expenses"]
     }
   ],
   
