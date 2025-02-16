@@ -36,7 +36,7 @@
  
   "navigation": [
     {
-      "group": "Taxes & Compliance",
+      "group": "Tax Compliance",
       "pages": ["1.1_1099", "1.2_delaware", "1.3_incometax", "1.4_RDcredits"]
     }
   ],
@@ -50,8 +50,7 @@
   
   "feedback": {
     "thumbsRating": true,
-    "raiseIssue": true,
-    "suggestEdit": true
+    "raiseIssue": true
     
   }
 
