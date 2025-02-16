@@ -41,9 +41,14 @@
       "url": "/overview"
     },
     {
-      "name": "Anchor 2",
-      "icon": "slack",
+      "name": "Overview",
+      "icon": "map",
       "url": "https://mintlify.com/community"
+    },
+    {
+      "anchor": "Overview",
+      "icon": "map",
+      "pages": "overview"      
     }
   ],
   
