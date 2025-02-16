@@ -33,8 +33,14 @@
       "to": "#2B45C1"
     }
   },
+
+  "topbarLinks": [
  
+  
   "navigation": [
+    {
+      "pages": ["0_overview"]
+    },
     {
       "group": "Tax Compliance",
       "pages": ["1.1_1099", "1.2_delaware", "1.3_incometax", "1.4_credits"]
