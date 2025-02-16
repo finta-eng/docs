@@ -50,7 +50,7 @@
   
   "feedback": {
     "thumbsRating": true,
-    "suggestEdit": true,
+    "suggestEdit": false,
     "raiseIssue": true
   }
 
