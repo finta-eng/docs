@@ -36,7 +36,10 @@
 
   
   "navigation": [
-    "overview",
+    {
+      "group": "Get Started",
+      "pages": "Overview"
+    },
     {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
