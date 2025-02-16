@@ -36,9 +36,9 @@
 
   "anchors": [
     {
-      "name": "Overview",
+      "anchor": "Overview",
       "icon": "map",
-      "url": "/overview"
+      "href": "/overview"
     }
   ],
 
