@@ -34,12 +34,16 @@
     }
   },
 
+  "anchors": [
+    {
+      "name": "Overview",
+      "icon": "map",
+      "url": "/overview"
+    }
+  ],
+
   
   "navigation": [
-    {
-      "group": "Get Started",
-      "pages": ["overview"]
-    },
     {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
@@ -49,12 +53,16 @@
       "pages": ["stack", "receipts", "reimburse", "expenses"]
     }
   ],
+
+
+
   
   "footerSocials": {
     "x": "https://x.com/finta",
     "linkedin": "https://www.linkedin.com/company/finta"
   },
 
+  
   "seo": {
     "metatags": {
       "og:title": "Finta Guide: Startup Finances Playbook",
