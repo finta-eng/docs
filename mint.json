@@ -34,30 +34,9 @@
     }
   },
 
-   "anchors": [
-    {
-      "name": "Overview1",
-      "icon": "map",
-      "url": "/overview"
-    },
-    {
-      "name": "Overview2",
-      "icon": "map",
-      "url": "/overview"
-    },
-    {
-      "name": "Overview3",
-      "icon": "map",
-      "url": "/overview"      
-    }
-  ],
   
   "navigation": [
-    {
-      "anchor": "Overview3",
-      "icon": "map",
-      "pages": "overview"
-    },
+    "overview",
     {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
