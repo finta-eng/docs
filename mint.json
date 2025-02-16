@@ -37,14 +37,17 @@
   "navigation": [
     {
       "group": "Tax Compliance",
-      "pages": ["1.1_1099", "1.2_delaware", "1.3_incometax", "1.4_RDcredits"]
+      "pages": ["1.1_1099", "1.2_delaware", "1.3_incometax", "1.4_credits"]
+    },
+    {
+      "group": "Best Practices",
+      "pages": ["2.1_stack", "2.2_receipts", "2.3_reimbursements", "2.4_expenses"]
     }
   ],
   
   "footerSocials": {
     "x": "https://x.com/finta",
-    "linkedin": "https://www.linkedin.com/company/finta",
-    "website": "https://www.finta.com"
+    "linkedin": "https://www.linkedin.com/company/finta"
   },
 
 
