@@ -36,32 +36,18 @@
 
 
 
-  "navigation": {
-    "anchors": [
-      {
-        "anchor": "Documentation",
-        "icon": "book-open",
-        "pages": [
-          "quickstart",
-          "development",
-          "navigation"
-        ]
-      }
-    ]
-  },
   
   
   "navigation": [
     {
-      "group": "Anchors",
+      "anchor": "Documentation",
+      "icon": "book-open",
       "pages": [
-        {
-          "name": "Overview",
-          "icon": "map",
-          "url": "/overview"
-        }
+        "quickstart",
+        "development",
+        "navigation"
       ]
-    },
+    },    
     {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
