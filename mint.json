@@ -38,13 +38,9 @@
   
   "navigation": [
     {
-      "anchors": [
-        {
-          "name": "Overview",
-        "icon": "map",
-        "url": "/overview"
-        }
-      ]
+      "name": "Overview",
+      "icon": "map",
+      "url": "/overview"
     },
     {
       "group": "Tax Compliance",
