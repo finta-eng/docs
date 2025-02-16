@@ -36,18 +36,8 @@
  
   "navigation": [
     {
-      "group": "Section 1",
-      "pages": ["1.1_introduction", "1.2_development"]
-    },
-    {
-      "group": "Section 2",
-      "pages": [
-        "1.1_introduction",
-        {
-          "group": "Section 2.1",
-          "pages": ["introduction", "development"]
-        }
-      ]
+      "group": "Taxes & Compliance",
+      "pages": ["1.1_1099", "1.2_delaware", "1.3_incometax", "1.4_R&Dtaxcredits"]
     }
   ],
   
