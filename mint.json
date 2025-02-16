@@ -36,6 +36,20 @@
 
 
 
+  "navigation": {
+    "anchors": [
+      {
+        "anchor": "Documentation",
+        "icon": "book-open",
+        "pages": [
+          "quickstart",
+          "development",
+          "navigation"
+        ]
+      }
+    ]
+  },
+  
   
   "navigation": [
     {
