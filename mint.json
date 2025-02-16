@@ -34,20 +34,22 @@
     }
   },
 
-
+  "anchors": [
+    {
+      "name": "Anchor 1",
+      "icon": "book-open-cover",
+      "url": "https://mintlify.com/docs"
+    },
+    {
+      "name": "Anchor 2",
+      "icon": "slack",
+      "url": "https://mintlify.com/community"
+    }
+  ],
 
   
   
   "navigation": [
-    {
-      "anchor": "Documentation",
-      "icon": "book-open",
-      "pages": [
-        "quickstart",
-        "development",
-        "navigation"
-      ]
-    },    
     {
       "group": "Tax Compliance",
       "pages": ["1099", "delaware", "incometax", "credits"]
