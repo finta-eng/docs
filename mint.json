@@ -38,7 +38,7 @@
   "navigation": [
     {
       "group": "",
-      "pages": ["overview"]
+      "pages": ["welcome"]
     },
     {
       "group": "Tax Compliance",
