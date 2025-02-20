@@ -93,13 +93,11 @@ Many startups incorporate in Delaware because VCs require it, as Delaware’s bu
     \left\lceil \frac{\text{Assets} \times \left(\frac{\text{Outstanding}}{\text{Authorized}}\right)}{\$1,000,000} \right\rceil \times \$400 + \$50
     $$
 
-    $$
-\left\lceil \frac{\text{Assets} \times \left(\frac{\text{Outstanding}}{\text{Authorized}}\right)}{\$1,000,000} \right\rceil \times \$400 + \$50
-$$
-
-
-    To calculate yours, copy this formula and replace the variables:
+    To calculate yours, copy this formula:
+    
     ```=CEILING(Assets * (Outstanding / Authorized), 1000000) / 1000000 * 400 + 50```
+
+    And replace the variables
     - Authorized: total shares authorized
     - Outstanding: total shares outstanding
     - Assets: assets or cash at the end of last year
