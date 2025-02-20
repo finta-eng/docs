@@ -88,12 +88,12 @@ Many startups incorporate in Delaware because VCs require it, as Delaware’s bu
   <Accordion title="How the tax is calculated">
     Lowest amount is \$400 plus \$50 filing fee. This is the general methodology:
     $$
-    \left\lceil \frac{\text{Assets} \times \left(\frac{\text{Outstanding}}{\text{Authorized}}\right)}{\$1,000,000} \right\rceil \times \$400 + \$50
+    \left\lceil \frac{\text{Assets} \div \left(\frac{\text{Outstanding}}{\text{Authorized}}\right)}{\$1,000,000} \right\rceil \times \$400 + \$50
     $$
 
     
     To calculate yours, copy this formula:
-    ```=CEILING(Assets * (Outstanding / Authorized), 1000000) / 1000000 * 400 + 50```
+    ```=CEILING(Assets / (Outstanding / Authorized) / 1000000) * 400 + 50```
     And replace the variables:
     - Authorized: total shares authorized
     - Outstanding: total shares outstanding
