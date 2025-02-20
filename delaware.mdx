@@ -14,7 +14,7 @@ Many startups incorporate in Delaware because VCs require it, as Delaware’s bu
   <Accordion title="Who needs to pay and file?">
     Every company incorporated in Delaware must pay the franchise tax and file an annual report, even if it doesn’t do business there.
     
-    Some founders assume they don’t need to pay if they have no revenue, no activity, or operate in another state — but the obligation exists regardless unless they formally dissolve the company.
+    Some founders assume they don’t need to pay if they have no revenue, no activity, or operate in another state — but the obligation exists regardless unless you formally dissolve the company.
   </Accordion>
 
   <Accordion title="Deadline and late penalties">
@@ -24,56 +24,61 @@ Many startups incorporate in Delaware because VCs require it, as Delaware’s bu
     
     Missing the deadline results in a $200 late fee plus 1.5% interest per month on the unpaid tax.
     
-    After a few months of nonpayment, Delaware could classify the company as _"not in good standing"_. After multiple missed payments, the state may shut down the company to make it legally nonexistent.
+    After months of nonpayment, Delaware could classify the company as _"not in good standing"_. And if multiple payments are missed, they may shut it down completely.
   </Accordion>
 
   <Accordion title="How to pay and file">
-    <Check>Finta helps customers with this entire process</Check>
+    <Check>Finta helps customers with this entire process.</Check>
     
   <Steps>
-  <Step title="Get your Delaware File Number">
-    If you don't know your company's Delaware File Number yet, go to the [Delaware Name Lookup Page](https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx), enter your company's legal name in Entity Name and click Search.
+  <Step title="Get Delaware File Number">
+    If you don't know your company's Delaware File Number yet, go to the [Delaware Name Lookup](https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx) page, enter your company's legal name in **Entity Name** and click **Search**.
 
-    Get the File Number from the results.
+    Get the **File Number** from the results.
   </Step>
-  <Step title="Go to the input page">
-    Go to the [Delaware Franchise Tax website](https://corp.delaware.gov/paytaxes/), click "Click Here to Pay Taxes / File Annual Report", enter your Delaware File Number along with the Captcha and click Continue.
+  <Step title="Go to input page">
+    Go to the [filing page](https://corp.delaware.gov/paytaxes/), click **Click Here to Pay Taxes / File Annual Report**, enter your Delaware File Number, solve the captcha, then click **Continue**.
 
-    Find the corresponding Tax Year and click "File Annual Report". If it says "File Amended Annual Report", that means it's already been filed.
+    In the correct tax year row click **File Annual Report**. (If it says _File Amended Annual Report_ then it's already been filed.)
   </Step>
-  <Step title="Enter your cap table info">
+  <Step title="Enter cap table info">
     In the Stock Information table enter:
-    - Issued shares: enter issued amount for this share class.
-    - Gross assets: enter your assets or cash balance for end of last year.
-    - Asset date: enter "12/31/yyyy".
+    - **Issued shares**: issued amount for this share class from cap table.
+    - **Gross assets**: assets or cash balance at the end of last year.
+    - **Asset date**: "12/31/yyyy". (yyyy = tax year you're filing for.)
   </Step>
   <Step title="Recalculate tax amount">
-    The Amount Due will likely show a crazy high number. Don't worry - click the **Recalculate Tax** button and the amount should be much lower. 
+    The Amount Due will likely show an insanely high number. It's ok - click **Recalculate Tax** and the amount should be much lower. 
+    
     Check the section below to see how this is calculated.
   </Step>  
-  <Step title="Enter your Directors info">
+  <Step title="Enter Directors info">
     Complete the remaining sections on this page:
-    - Principal place of business: enter your headquarter address.
-    - Officer information: typically this is the CEO, enter their information.
-    - Directors information: typically this is the founders.
-      - In Enter Total Number of Directors, enter the number first, then click Enter Directors Info. Then complete the information for each row.
+    - Principal place of business: enter your headquarters address.
+    - Officer information: typically this is the CEO. Enter their info.
+    - Directors information:
+      - Enter Total Number of Directors: enter the number of directors. Typically this is the founders.
+      - Click Enter Directors Info, then complete the information for each row.
     - Checkbox: certify to Terms and conditions
-    - Your information: entering addresses three times isn't enough, one more time.
-    - Click Continue Filing
+    - Last row: entering addresses three times isn't enough, just one more time.
+    - Click **Continue Filing**
   </Step>
   <Step title="Proceed to payment">
-    This is just the confirmation page, scroll to the bottom and click "Proceed to Payment"
+    On the confirmation page, scroll to the bottom and click **Proceed to Payment**
+    
     Enter your payment information and click Submit.
 
     If tax amount is ≥ $5,000 then only ACH is accepted. 
     
 
-    <Warning>If ACH, make sure you add Delaware to the ACH accepted list. Their ID is 1225092400</Warning>
+    <Warning>If ACH and you have whitelist/blocking, add Delaware's ID: 1225092400 first.</Warning>
 
     
   </Step>
   <Step title="Keep confirmation records">
-    Make sure to download and keep a copy of the payment and filing confirmation. You're all set!
+    Download and keep the payment and filing confirmation.
+    
+    You're all set!
   </Step>  
   </Steps>
 
@@ -81,11 +86,17 @@ Many startups incorporate in Delaware because VCs require it, as Delaware’s bu
   </Accordion>
 
   <Accordion title="How the tax is calculated">
-    It should be based on this simple calculation:
+    The lowest it can be is $400 plus a $50 filing feel.
 
-If your cap table changed throughout the year, Delaware will use a weighted-sum based on the number of days of what the cap table structure looks like.
+    Here's the general formula on how it's calculated:
+    \[
+\left\lceil \frac{\text{Assets} \times \left(\frac{\text{Outstanding}}{\text{Authorized}}\right)}{\$1,000,000} \right\rceil \times \$400 + \$50
+\]
 
-For example, if you incorporated on 7/1/2024, then for the first half the year it's $0. Second half is $400. So that comes out to $200. Then plus $50 filing fee, you should owe $250.
+
+    > =CEILING(Assets * (Outstanding / Authorized), 1000000) / 1000000 * 400 + 50
+    Use this formula and replace Assets, Outstanding, and Authorized
+
   </Accordion>
   
 </AccordionGroup>
