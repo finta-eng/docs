@@ -1,0 +1,17 @@
+/* Custom CSS for Mintlify documentation */
+
+/* Callout blocks */
+div.callout {
+  border-radius: 9.95px;
+}
+
+/* Left nav bar highlighted page*/
+a.rounded-xl.bg-primary\/10.text-primary {
+    border-radius: 5px;
+  }
+
+/* Left nav bar width */
+#sidebar {
+    width: 16rem !important; 
+}
+
