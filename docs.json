@@ -1,0 +1,67 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Finta Guide",
+  "colors": {
+    "primary": "#2679F3",
+    "light": "#2679F3",
+    "dark": "#2679F3"
+  },
+  "favicon": "/logo/favicon.png",
+  "navigation": {
+    "groups": [
+      {
+        "group": "\u00A0",
+        "pages": [
+          "welcome"
+        ]
+      },
+      {
+        "group": "Tax Compliance",
+        "pages": [
+          "deadlines",
+          "delaware",
+          "1099",
+          "incometax",
+          "credits"
+        ]
+      },
+      {
+        "group": "Best Practices",
+        "pages": [
+          "stack",
+          "receipts",
+          "reimburse",
+          "expenses"
+        ]
+      },
+      {
+        "group": "\u00A0",
+        "pages": [
+          "contact"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://www.finta.com"
+  },
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#FFF",
+      "dark": "#646464"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/finta",
+      "linkedin": "https://www.linkedin.com/company/finta"
+    }
+  }
+}

@@ -1,5 +1,12 @@
 /* Custom CSS for Mintlify documentation */
 
+/* Global font family */
+body, 
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, li, td, th, input, button, textarea {
+  font-family: 'ABC Oracle', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
 /* Callout blocks */
 div.callout {
   border-radius: 9.95px;
@@ -13,5 +20,52 @@ a.rounded-xl.bg-primary\/10.text-primary {
 /* Left nav bar width */
 #sidebar {
     width: 16rem !important; 
+}
+
+/* Set custom border radius for rounded elements */
+.rounded-2xl {
+  border-radius: 9.95px !important;
+}
+
+/* Input container styles */
+.input-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* Base styles for all inputs */
+.calculator-input {
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  font-size: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  text-align: right;
+}
+
+/* Placeholder color */
+.calculator-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Focus styles */
+.calculator-input:focus {
+  outline: none;
+  border-color: #2679F3;
+  box-shadow: 0 0 0 3px rgba(38, 121, 243, 0.1);
+}
+
+/* Remove spinner buttons from number inputs */
+.calculator-input::-webkit-outer-spin-button,
+.calculator-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.calculator-input[type=number] {
+  -moz-appearance: textfield;
 }
 
