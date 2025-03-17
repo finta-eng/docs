@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create a container for the entire example section
     const exampleSection = document.createElement('div');
     exampleSection.style.marginTop = '0';
-    exampleSection.style.marginBottom = '2rem';
+    exampleSection.style.marginBottom = '0'; // Changed from 2rem to 0
     
     // No header or description
     
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     calculatorTable.style.width = '100%';
     calculatorTable.style.borderCollapse = 'collapse';
     calculatorTable.style.marginTop = '0';
+    calculatorTable.style.marginBottom = '0'; // Add explicit 0 margin bottom
     calculatorTable.style.borderSpacing = '0';
 
     // Create table header
@@ -849,7 +850,25 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         
         // Add event listeners
-        typeSelect.addEventListener('change', updateQualifiedPercent);
+        typeSelect.addEventListener('change', function() {
+          // Check if the type is Hosting Fee or Raw Material
+          const isSpecialType = this.value === 'hosting-fee' || this.value === 'raw-material';
+          
+          // Set R&D % to 100 and change background to white if it's a special type
+          if (isSpecialType) {
+            rdPercentInput.value = 100;
+            rdPercentInput.readOnly = true;
+            rdPercentInput.style.backgroundColor = 'white';
+            rdPercentCell.style.backgroundColor = 'white';
+          } else {
+            // Reset to default state
+            rdPercentInput.readOnly = false;
+            rdPercentInput.style.backgroundColor = '#EAF1FE';
+            rdPercentCell.style.backgroundColor = '#EAF1FE';
+          }
+          
+          updateQualifiedPercent();
+        });
         
         usBasedCheckbox.addEventListener('change', updateQualifiedPercent);
         
@@ -878,7 +897,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const footerRow = document.createElement('tr');
     const footerCell = document.createElement('td');
     footerCell.colSpan = 8; // Span all columns
-    footerCell.style.padding = '5px 8px';
+    footerCell.style.padding = '0'; // Remove all padding
     footerCell.style.borderTop = 'none';
     footerCell.style.borderBottom = 'none';
     footerCell.style.borderLeft = 'none';
@@ -959,7 +978,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add the hidden total credits value element
     exampleSection.appendChild(totalCreditsValue);
-    
+
     // Create a container for the questions to be side by side
     const questionsContainer = document.createElement('div');
     questionsContainer.style.display = 'flex';
@@ -969,11 +988,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create incorporation year radio buttons
     const incorporationYearText = document.createElement('div');
     incorporationYearText.style.marginRight = '40px';
+    incorporationYearText.style.marginTop = '0';
+    incorporationYearText.style.marginBottom = '0';
     
     const incorporationYearLabel = document.createElement('div');
     incorporationYearLabel.textContent = 'Incorporation';
     incorporationYearLabel.style.fontWeight = 'bold';
-    incorporationYearLabel.style.fontSize = '14px';
+    incorporationYearLabel.style.fontSize = '12px';
     incorporationYearLabel.style.marginBottom = '8px';
     incorporationYearLabel.style.paddingLeft = '10px';
     incorporationYearText.appendChild(incorporationYearLabel);
@@ -1003,8 +1024,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const incorporationAfterLabel = document.createElement('label');
     incorporationAfterLabel.htmlFor = 'incorporation-after';
-    incorporationAfterLabel.textContent = `${thresholdYear} or After`;
-    incorporationAfterLabel.style.fontSize = '14px';
+    incorporationAfterLabel.textContent = `${thresholdYear} or after`;
+    incorporationAfterLabel.style.fontSize = '12px';
     
     incorporationAfterContainer.appendChild(incorporationAfterRadio);
     incorporationAfterContainer.appendChild(incorporationAfterLabel);
@@ -1025,7 +1046,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const incorporationBeforeLabel = document.createElement('label');
     incorporationBeforeLabel.htmlFor = 'incorporation-before';
     incorporationBeforeLabel.textContent = `Before ${thresholdYear}`;
-    incorporationBeforeLabel.style.fontSize = '14px';
+    incorporationBeforeLabel.style.fontSize = '12px';
     
     incorporationBeforeContainer.appendChild(incorporationBeforeRadio);
     incorporationBeforeContainer.appendChild(incorporationBeforeLabel);
@@ -1040,7 +1061,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const revenueLabel = document.createElement('div');
     revenueLabel.textContent = 'Revenue';
     revenueLabel.style.fontWeight = 'bold';
-    revenueLabel.style.fontSize = '14px';
+    revenueLabel.style.fontSize = '12px';
     revenueLabel.style.marginBottom = '8px';
     revenueLabel.style.paddingLeft = '10px';
     revenueText.appendChild(revenueLabel);
@@ -1068,7 +1089,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const revenueLowLabel = document.createElement('label');
     revenueLowLabel.htmlFor = 'revenue-low';
     revenueLowLabel.textContent = '≤ $5M';
-    revenueLowLabel.style.fontSize = '14px';
+    revenueLowLabel.style.fontSize = '12px';
     
     revenueLowContainer.appendChild(revenueLowRadio);
     revenueLowContainer.appendChild(revenueLowLabel);
@@ -1088,7 +1109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const revenueHighLabel = document.createElement('label');
     revenueHighLabel.htmlFor = 'revenue-high';
     revenueHighLabel.textContent = '> $5M';
-    revenueHighLabel.style.fontSize = '14px';
+    revenueHighLabel.style.fontSize = '12px';
     
     revenueHighContainer.appendChild(revenueHighRadio);
     revenueHighContainer.appendChild(revenueHighLabel);
@@ -1104,90 +1125,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add the questions container after the total credits
     exampleSection.appendChild(questionsContainer);
     
-    // Create a container for the tax credit eligibility message
+    // Create a container for the eligibility message - simple text only
     const eligibilityMessageContainer = document.createElement('div');
     eligibilityMessageContainer.style.margin = '16px 0';
-    eligibilityMessageContainer.style.padding = '16px 20px';
-    eligibilityMessageContainer.style.overflow = 'hidden';
-    eligibilityMessageContainer.style.borderRadius = '16px';
-    eligibilityMessageContainer.style.display = 'flex';
-    eligibilityMessageContainer.style.gap = '12px';
-    eligibilityMessageContainer.style.border = '1px solid rgba(38, 121, 243, 0.2)';
-    eligibilityMessageContainer.style.backgroundColor = '#EAF1FE';
     eligibilityMessageContainer.style.fontSize = '14px';
+    eligibilityMessageContainer.style.color = '#2679F3';
     
-    // Create the icon container
-    const iconContainer = document.createElement('div');
-    iconContainer.style.marginTop = '2px';
-    iconContainer.style.width = '16px';
+    // Create the message container with just text
+    const messageContainer = document.createElement('div');
     
-    // Create SVG icon for bank note
-    const svgIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgIcon.setAttribute('width', '16');
-    svgIcon.setAttribute('height', '16');
-    svgIcon.setAttribute('viewBox', '0 0 24 24');
-    svgIcon.setAttribute('fill', 'none');
-    svgIcon.setAttribute('stroke', 'currentColor');
-    svgIcon.setAttribute('stroke-width', '2');
-    svgIcon.setAttribute('stroke-linecap', 'round');
-    svgIcon.setAttribute('stroke-linejoin', 'round');
-    svgIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    svgIcon.style.color = '#2679F3';
-    svgIcon.style.width = '16px';
-    svgIcon.style.height = 'auto';
+    // Create the two lines of text
+    const line1Element = document.createElement('div');
+    line1Element.id = 'eligibility-line1';
     
-    // Create bank note icon paths
-    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    rect.setAttribute('x', '2');
-    rect.setAttribute('y', '6');
-    rect.setAttribute('width', '20');
-    rect.setAttribute('height', '12');
-    rect.setAttribute('rx', '2');
+    const line2Element = document.createElement('div');
+    line2Element.id = 'eligibility-line2';
     
-    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    circle.setAttribute('cx', '12');
-    circle.setAttribute('cy', '12');
-    circle.setAttribute('r', '2');
+    // Add the elements to the container
+    messageContainer.appendChild(line1Element);
+    messageContainer.appendChild(line2Element);
+    eligibilityMessageContainer.appendChild(messageContainer);
     
-    const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line1.setAttribute('x1', '6');
-    line1.setAttribute('y1', '12');
-    line1.setAttribute('x2', '6');
-    line1.setAttribute('y2', '12');
-    
-    const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line2.setAttribute('x1', '18');
-    line2.setAttribute('y1', '12');
-    line2.setAttribute('x2', '18');
-    line2.setAttribute('y2', '12');
-    
-    svgIcon.appendChild(rect);
-    svgIcon.appendChild(circle);
-    svgIcon.appendChild(line1);
-    svgIcon.appendChild(line2);
-    iconContainer.appendChild(svgIcon);
-    
-    // Create the content container
-    const contentContainer = document.createElement('div');
-    contentContainer.style.minWidth = '0';
-    contentContainer.style.width = '100%';
-    contentContainer.style.color = '#2679F3';
-    
-    // Create two separate lines for the eligibility message
-    const eligibilityMessageLine1 = document.createElement('div');
-    eligibilityMessageLine1.id = 'eligibility-message-line1';
-    eligibilityMessageLine1.style.fontWeight = 'normal';
-    eligibilityMessageLine1.style.marginBottom = '4px';
-    
-    const eligibilityMessageLine2 = document.createElement('div');
-    eligibilityMessageLine2.id = 'eligibility-message-line2';
-    eligibilityMessageLine2.style.fontWeight = 'normal';
-    
-    contentContainer.appendChild(eligibilityMessageLine1);
-    contentContainer.appendChild(eligibilityMessageLine2);
-    
-    eligibilityMessageContainer.appendChild(iconContainer);
-    eligibilityMessageContainer.appendChild(contentContainer);
+    // Add the eligibility message to the calculator
     exampleSection.appendChild(eligibilityMessageContainer);
     
     // No need to add the button container separately since it's now part of the table
@@ -1742,7 +1701,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Call initially
       setTimeout(updateDeleteIconVisibility, 0);
       
-      // Function to update the Qualified % based on Type and US-Based
+      // Add the new row to the table body
+      tableBody.appendChild(row);
+      
+      // Functions to update the cell values
       const updateQualifiedPercent = function() {
         if (!usBasedCheckbox.checked) {
           qualifiedPercentSpan.textContent = '';
@@ -1821,14 +1783,27 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Add event listeners to update all calculations
       typeSelect.addEventListener('change', function() {
+        // Check if the type is Hosting Fee or Raw Material
+        const isSpecialType = this.value === 'hosting-fee' || this.value === 'raw-material';
+        
+        // Set R&D % to 100 and change background to white if it's a special type
+        if (isSpecialType) {
+          rdPercentInput.value = 100;
+          rdPercentInput.readOnly = true;
+          rdPercentInput.style.backgroundColor = 'white';
+          rdPercentCell.style.backgroundColor = 'white';
+        } else {
+          // Reset to default state
+          rdPercentInput.readOnly = false;
+          rdPercentInput.style.backgroundColor = '#EAF1FE';
+          rdPercentCell.style.backgroundColor = '#EAF1FE';
+        }
+        
         updateQualifiedPercent();
         updateResults();
       });
       
-      usBasedCheckbox.addEventListener('change', function() {
-        updateQualifiedPercent();
-        updateResults();
-      });
+      usBasedCheckbox.addEventListener('change', updateQualifiedPercent);
       
       input.addEventListener('input', function() {
         updateRDExpenses();
@@ -1847,10 +1822,20 @@ document.addEventListener('DOMContentLoaded', function() {
       // Initialize Qualified % display
       updateQualifiedPercent();
       
+      // Check if the initial type is a special type (Hosting Fee or Raw Material)
+      // and set R&D % accordingly
+      const initialType = typeSelect.value;
+      if (initialType === 'hosting-fee' || initialType === 'raw-material') {
+        rdPercentInput.value = 100;
+        rdPercentInput.readOnly = true;
+        rdPercentInput.style.backgroundColor = 'white';
+        rdPercentCell.style.backgroundColor = 'white';
+      }
+      
       // Add the row to the table body
       tableBody.appendChild(row);
       
-      // Add event listener for amount input
+      // Add event listener for amount input formatting
       input.addEventListener('input', function(e) {
         // Get the input value without commas
         let rawValue = e.target.value.replace(/,/g, '');
@@ -1930,9 +1915,24 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Function to update the eligibility message based on conditions
       function updateEligibilityMessage(totalCredits) {
-        const line1Element = document.getElementById('eligibility-message-line1');
-        const line2Element = document.getElementById('eligibility-message-line2');
+        const line1Element = document.getElementById('eligibility-line1');
+        const line2Element = document.getElementById('eligibility-line2');
         if (!line1Element || !line2Element) return;
+        
+        // Check if incorporation options have been selected
+        const incorporationSelected = document.getElementById('incorporation-after').checked || 
+                                      document.getElementById('incorporation-before').checked;
+        
+        // Check if revenue options have been selected
+        const revenueSelected = document.getElementById('revenue-low').checked || 
+                               document.getElementById('revenue-high').checked;
+        
+        // If user hasn't selected both incorporation and revenue options yet
+        if (!incorporationSelected || !revenueSelected) {
+          line1Element.innerHTML = "Complete the table and questions above to see your eligible tax credits amount.";
+          line2Element.textContent = '';
+          return;
+        }
         
         // Get the formatted total credits value
         const formattedTotal = '$' + formatNumber(Math.ceil(totalCredits));
