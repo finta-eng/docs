@@ -47,7 +47,15 @@ a.rounded-xl.bg-primary\/10.text-primary {
 
 /* Placeholder color */
 .calculator-input::placeholder {
-  color: #a0aec0;
+  color: #718096;
+}
+
+/* Output columns display */
+.qualified-percent-display,
+.rd-expenses-display,
+.credit-percent-display {
+  font-size: 12px !important;
+  color: #000000 !important;
 }
 
 /* Focus styles */
@@ -67,5 +75,17 @@ a.rounded-xl.bg-primary\/10.text-primary {
 /* Firefox */
 .calculator-input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Change color and increase size of all Mintlify Step titles */
+div[role="list"] div[role="listitem"] p.mt-2.font-semibold.prose {
+  color: #2679F3 !important;
+  font-size: 18px !important; /* Increased from default size */
+}
+
+div[role="list"] div[role="listitem"] div.w-7.h-7.shrink-0.rounded-lg.bg-gray-100 {
+  background-color: #EAF1FE !important;
+  color: #2679F3 !important;
 }
 
