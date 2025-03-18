@@ -3,13 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Credits.js loaded, checking page path...');
   
   // Check if this is the credits page
-  const isCreditsPage = window.location.pathname.includes('/credits') || 
-                        document.title.includes('Tax Credits') ||
-                        document.title.includes('R&D Tax Credits');
-  
-  console.log('Is credits page:', isCreditsPage);
-  console.log('Current path:', window.location.pathname);
-  console.log('Document title:', document.title);
+  const isCreditsPage = window.location.pathname.includes('/credits');
   
   if (isCreditsPage) {
     console.log('This is the credits page, adding calculator...');
@@ -1973,5 +1967,5 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
   setTimeout(function() {
     const event = new Event('DOMContentLoaded');
     document.dispatchEvent(event);
-  }, 2000);
+  }, 1000);
 } 
