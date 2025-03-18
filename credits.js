@@ -1,4 +1,10 @@
 // Custom JavaScript for Mintlify documentation
+document.addEventListener('DOMContentLoaded', function() {
+  loadCalculator();
+  navigation.addEventListener("navigate", e => {
+    console.log('Credits.js loaded, checking page path...');
+  });
+});
 
 function loadCalculator() {
   const isCreditsPage =  window.location.pathname.includes('/credits');
