@@ -1,9 +1,7 @@
 // Custom JavaScript for Mintlify documentation
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Credits.js loaded, checking page path...');
-  
-  // Check if this is the credits page
-  const isCreditsPage = window.location.pathname.includes('/credits');
+
+function loadCalculator() {
+  const isCreditsPage =  window.location.pathname.includes('/credits');
   
   if (isCreditsPage) {
     console.log('This is the credits page, adding calculator...');
@@ -1864,7 +1862,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Find the main content area
     const mainContent = document.querySelector('.prose');
-    
+    debugger
     if (mainContent) {
       // Insert before the footer
       mainContent.appendChild(exampleSection);
@@ -1959,6 +1957,23 @@ document.addEventListener('DOMContentLoaded', function() {
       updateTotalCredits();
     }
   }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  navigation.addEventListener("navigate", e => {
+    console.log('Credits.js loaded, checking page path...');
+    
+    // Check if this is the credits page
+    if (!(e.destination.url.includes('/credits'))) {
+      return
+    }
+
+    let intervalId = setInterval(() => {
+      if (document.querySelector('h3#calculator') != null) {
+        loadCalculator()
+        clearInterval(intervalId)
+      }
+    }, 500)
+  })
 });
 
 // Add a fallback to ensure the script runs even if DOMContentLoaded already fired
