@@ -1973,5 +1973,5 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
   setTimeout(function() {
     const event = new Event('DOMContentLoaded');
     document.dispatchEvent(event);
-  }, 1000);
+  }, 2000);
 } 
