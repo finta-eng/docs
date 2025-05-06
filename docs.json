@@ -63,5 +63,10 @@
       "x": "https://x.com/finta",
       "linkedin": "https://www.linkedin.com/company/finta"
     }
+  },
+  "seo": {
+    "metatags": {
+      "og:image": "/images/hero.png"
+    }
   }
 }
