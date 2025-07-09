@@ -39,7 +39,7 @@
     },
     {
       "group": "Tax Compliance",
-      "pages": ["deadlines", "1099", "delaware", "credits", "incometax"]
+      "pages": ["requirements", "deadlines", "1099", "delaware", "credits", "incometax"]
     },
     {
       "group": "Best Practices",
