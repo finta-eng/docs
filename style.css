@@ -9,12 +9,12 @@ p, span, div, a, li, td, th, input, button, textarea {
 
 /* Callout blocks */
 div.callout {
-  border-radius: 9.95px;
+  border-radius: 8px;
 }
 
 /* Left nav bar highlighted page*/
 a.rounded-xl.bg-primary\/10.text-primary {
-    border-radius: 5px;
+    border-radius: 8px;
   }
 
 /* Left nav bar width */
@@ -24,7 +24,7 @@ a.rounded-xl.bg-primary\/10.text-primary {
 
 /* Set custom border radius for rounded elements */
 .rounded-2xl {
-  border-radius: 9.95px !important;
+  border-radius: 8px !important;
 }
 
 /* Input container styles */
@@ -38,9 +38,9 @@ a.rounded-xl.bg-primary\/10.text-primary {
 .calculator-input {
   height: 26px;
   border-radius: 4px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #E7E7E9;
   font-size: 12px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(15, 12, 12, 0.05);
   background-color: white;
   text-align: right;
 }
@@ -62,7 +62,7 @@ a.rounded-xl.bg-primary\/10.text-primary {
 .calculator-input:focus {
   outline: none;
   border-color: #2679F3;
-  box-shadow: 0 0 0 3px rgba(38, 121, 243, 0.1);
+  box-shadow: 0 0 0 2px rgba(38, 121, 243, 0.08);
 }
 
 /* Remove spinner buttons from number inputs */
@@ -78,6 +78,11 @@ a.rounded-xl.bg-primary\/10.text-primary {
   appearance: textfield;
 }
 
+/* Body text color to match Finta */
+p, li {
+  color: #0F0C0C;
+}
+
 /* Change color and increase size of all Mintlify Step titles */
 div[role="list"] div[role="listitem"] p.mt-2.font-semibold.prose {
   color: #2679F3 !important;
@@ -87,5 +92,66 @@ div[role="list"] div[role="listitem"] p.mt-2.font-semibold.prose {
 div[role="list"] div[role="listitem"] div.w-7.h-7.shrink-0.rounded-lg.bg-gray-100 {
   background-color: #EAF1FE !important;
   color: #2679F3 !important;
+}
+
+/* Card shadows to match Finta's style */
+.card {
+  box-shadow: 0px 1px 3px rgba(15, 12, 12, 0.05) !important;
+  border: 1px solid #EFEFF2 !important;
+}
+
+/* Button styling to match Finta */
+.primary-button {
+  border-radius: 8px !important;
+  background-color: #2679F3 !important;
+  box-shadow: 0px 1px 2px rgba(15, 12, 12, 0.05) !important;
+  border: none !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0px 4px 8px rgba(15, 12, 12, 0.08) !important;
+}
+
+/* Finta link styling - simpler approach */
+.prose a, .prose a:link, .prose a:visited, 
+.content a, .content a:link, .content a:visited {
+  color: #2679F3 !important;
+  text-decoration: none !important;
+  font-weight: normal !important;
+  background-image: none !important;
+  background: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Only apply underline on hover */
+.prose a:hover, .content a:hover {
+  color: #215BB9 !important;
+  text-decoration: underline !important;
+}
+
+/* Navigation: Blue highlight (#EAF1FE bg, #2679F3 text) */
+.nav-item.active, .sidebar-item.active {
+  background-color: #EAF1FE !important;
+  color: #2679F3 !important;
+  font-weight: 500 !important;
+}
+
+/* Code block styling to match Finta */
+pre, code, .code-block {
+  border-radius: 8px !important;
+  background-color: #F5F5F7 !important;
+  border: 1px solid #EFEFF2 !important;
+  font-family: 'IBM Plex Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+}
+
+inline-code, code:not(pre code) {
+  background-color: #F5F5F7 !important;
+  color: #2679F3 !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 4px !important;
+  font-size: 0.9em !important;
 }
 

@@ -38,12 +38,16 @@
       "pages": ["welcome"]
     },
     {
-      "group": "Tax Compliance",
-      "pages": ["requirements", "deadlines", "1099", "delaware", "credits", "incometax"]
+      "group": "Incorporation",
+      "pages": ["incorporation"]
     },
     {
-      "group": "Best Practices",
-      "pages": ["stack", "receipts", "reimburse", "expenses"]
+      "group": "Expenses",
+      "pages": ["receipts", "reimburse", "expenses"]
+    },
+    {
+      "group": "Tax Compliance",
+      "pages": ["requirements", "deadlines", "1099", "delaware", "credits"]
     },
     {
       "group": "",
