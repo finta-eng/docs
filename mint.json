@@ -78,7 +78,9 @@
     "thumbsRating": true,
     "suggestEdit": false,
     "raiseIssue": false
-  }
+  },
 
-  
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity"]
+  }
 }
