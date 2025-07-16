@@ -11,7 +11,7 @@
   "navigation": {
     "groups": [
       {
-        "group": "",
+        "group": "Welcome",
         "pages": [
           "welcome"
         ]
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "group": "",
+        "group": "Contact",
         "pages": [
           "contact"
         ]
@@ -79,10 +79,5 @@
       "og:image": "/images/hero.png",
       "og:logo": "/images/logo_square.jpg"
     }
-  },
-  "feedback": {
-    "thumbsRating": true,
-    "suggestEdit": false,
-    "raiseIssue": false
   }
 }
