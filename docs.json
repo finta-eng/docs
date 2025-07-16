@@ -11,9 +11,23 @@
   "navigation": {
     "groups": [
       {
-        "group": "\u00A0",
+        "group": "",
         "pages": [
           "welcome"
+        ]
+      },
+      {
+        "group": "Incorporation",
+        "pages": [
+          "incorporation"
+        ]
+      },
+      {
+        "group": "Expenses",
+        "pages": [
+          "receipts",
+          "reimburse",
+          "expenses"
         ]
       },
       {
@@ -21,23 +35,13 @@
         "pages": [
           "requirements",
           "deadlines",
-          "delaware",
           "1099",
-          "incometax",
+          "delaware",
           "credits"
         ]
       },
       {
-        "group": "Best Practices",
-        "pages": [
-          "stack",
-          "receipts",
-          "reimburse",
-          "expenses"
-        ]
-      },
-      {
-        "group": "\u00A0",
+        "group": "",
         "pages": [
           "contact"
         ]
@@ -63,11 +67,6 @@
     "socials": {
       "x": "https://x.com/finta",
       "linkedin": "https://www.linkedin.com/company/finta"
-    }
-  },
-  "seo": {
-    "metatags": {
-      "og:image": "/images/hero.png"
     }
   }
 }
