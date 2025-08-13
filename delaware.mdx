@@ -2,103 +2,76 @@
 title: "Delaware Franchise Tax"
 icon: "file-check"
 sidebarTitle: "Delaware"
-mode: "wide"
 ---
 
-### Overview
+#### Overview
 The Delaware franchise tax is a fee that companies pay to Delaware each year to keep their legal status. It’s not a tax on profits — it’s a cost of being incorporated there. The state collects billions in fees from this system every year.
 
 Many startups incorporate in Delaware because VCs require it, as Delaware’s business-friendly laws make it easier for investors to navigate legal issues. 
 
-<AccordionGroup>
-  <Accordion title="Who needs to pay and file?">
-    Every company incorporated in Delaware must pay the franchise tax and file an annual report, even if it doesn’t do business there.
-    
-    Some founders assume they don’t need to pay if they have no revenue, no activity, or operate in another state — but the obligation exists regardless unless you formally dissolve the company.
-  </Accordion>
+#### Who needs to pay and file?
 
-  <Accordion title="Deadline and late penalties">
-    The franchise tax and annual report are due **March 1<sup>st</sup> every year** and must be completed together.
+Every company incorporated in Delaware must pay the franchise tax and file an annual report, even if it doesn't do business there.
 
-    If tax amount is ≥ $5,000, payment and filing is required every quarter.
-    
-    Missing the deadline results in a $200 late fee plus 1.5% interest per month on the unpaid tax.
-    
-    After months of nonpayment, Delaware could classify the company as _"not in good standing"_. And if multiple payments are missed, they may shut it down completely.
-  </Accordion>
+Some founders assume they don't need to pay if they have no revenue, no activity, or operate in another state, but the obligation exists regardless unless you formally dissolve the company.
 
-  <Accordion title="How to pay and file">
-    <Check>Finta helps customers with this entire process.</Check>
-    
-  <Steps>
-  <Step title="Get Delaware File Number">
-    If you don't know your company's Delaware File Number yet, go to the [Delaware Name Lookup](https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx) page, enter your company's legal name in **Entity Name** and click **Search**.
+#### Deadline and late penalties
 
-    Get the **File Number** from the results.
-  </Step>
-  <Step title="Go to input page">
-    Go to the [filing page](https://corp.delaware.gov/paytaxes/), click **Click Here to Pay Taxes / File Annual Report**, enter your Delaware File Number, solve the captcha, then click **Continue**.
+<Warning>
+The franchise tax and annual report are due March 1<sup>st</sup> every year and must be completed together.
+</Warning>
 
-    In the correct tax year row click **File Annual Report**. (If it says _File Amended Annual Report_ then it's already been filed.)
-  </Step>
-  <Step title="Enter cap table info">
-    In the Stock Information table enter:
-    - **Issued shares**: issued amount for this share class from cap table.
-    - **Gross assets**: assets or cash balance at the end of last year.
-    - **Asset date**: "12/31/yyyy". (yyyy = tax year you're filing for.)
-  </Step>
-  <Step title="Recalculate tax amount">
-    The Amount Due will likely show an insanely high number. It's ok - click **Recalculate Tax** and the amount should be much lower. 
-    
-    Check the section below to see how this is calculated.
-  </Step>  
-  <Step title="Enter Directors info">
-    Complete the remaining sections on this page:
-    - Principal place of business: enter your headquarters address.
-    - Officer information: typically this is the CEO. Enter their info.
-    - Directors information:
-      - Enter Total Number of Directors: enter the number of directors. Typically this is the founders.
-      - Click Enter Directors Info, then complete the information for each row.
-    - Checkbox: certify to Terms and conditions
-    - Last row: entering addresses three times isn't enough, just one more time.
-    - Click **Continue Filing**
-  </Step>
-  <Step title="Proceed to payment">
-    On the confirmation page, scroll to the bottom and click **Proceed to Payment**
-    
-    Enter your payment information and click Submit.
+If tax amount is ≥ $5,000, payment and filing is required every quarter.
 
-    If tax amount is ≥ $5,000 then only ACH is accepted. 
-    
+Missing the deadline results in a $200 late fee plus 1.5% interest per month on the unpaid tax.
 
-    <Warning>If ACH and you have whitelist/blocking, add Delaware's ID: 1225092400 first.</Warning>
+After months of nonpayment, Delaware could classify the company as "not in good standing". And if multiple payments are missed, they may shut it down completely.
 
-    
-  </Step>
-  <Step title="Keep confirmation records">
-    Download and keep the payment and filing confirmation.
-    
-    You're all set!
-  </Step>  
-  </Steps>
+#### How to pay and file
 
+Finta helps customers with this entire process.
 
-  </Accordion>
+1. **Get Delaware File Number** - If you don't know your company's Delaware File Number yet, go to the [Delaware Name Lookup](https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx) page, enter your company's legal name in **Entity Name** and click **Search**. Get the **File Number** from the results.
 
-  <Accordion title="How the tax is calculated">
-    Lowest amount is \$400 plus \$50 filing fee. This is the general methodology:
-    $$
-    \left\lceil \frac{\text{Assets} \div \left(\frac{\text{Outstanding}}{\text{Authorized}}\right)}{\$1,000,000} \right\rceil \times \$400 + \$50
-    $$
+2. **Go to input page** - Go to the [filing page](https://corp.delaware.gov/paytaxes/), click **Click Here to Pay Taxes / File Annual Report**, enter your Delaware File Number, solve the captcha, then click **Continue**. In the correct tax year row click **File Annual Report**. (If it says _File Amended Annual Report_ then it's already been filed.)
 
-    
-    To calculate yours, copy this formula:
-    ```=CEILING(Assets / (Outstanding / Authorized) / 1000000) * 400 + 50```
-    And replace the variables:
-    - Authorized: total shares authorized
-    - Outstanding: total shares outstanding
-    - Assets: assets or cash at the end of last year
+3. **Enter cap table info** - In the Stock Information table enter:
+   - **Issued shares**: issued amount for this share class from cap table.
+   - **Gross assets**: assets or cash balance at the end of last year.
+   - **Asset date**: "12/31/yyyy". (yyyy = tax year you're filing for.)
 
-  </Accordion>
-  
-</AccordionGroup>
+4. **Recalculate tax amount** - The Amount Due will likely show an insanely high number. It's ok, click **Recalculate Tax** and the amount should be much lower. Check the section below to see how this is calculated.
+
+5. **Enter Directors info** - Complete the remaining sections on this page:
+   - Principal place of business: enter your headquarters address.
+   - Officer information: typically this is the CEO. Enter their info.
+   - Directors information:
+     - Enter Total Number of Directors: enter the number of directors. Typically this is the founders.
+     - Click Enter Directors Info, then complete the information for each row.
+   - Checkbox: certify to Terms and conditions
+   - Last row: entering addresses three times isn't enough, just one more time.
+   - Click **Continue Filing**
+
+6. **Proceed to payment** - On the confirmation page, scroll to the bottom and click **Proceed to Payment**. Enter your payment information and click Submit. If tax amount is ≥ $5,000 then only ACH is accepted.
+
+<Warning>If ACH and you have whitelist/blocking, add Delaware's ID: 1225092400 first.</Warning>
+
+7. **Keep confirmation records** - Download and keep the payment and filing confirmation. You're all set!
+
+#### How the tax is calculated
+
+<Tip>
+The minimum amount is \$450 (\$400 tax plus \$50 filing fee).
+</Tip>
+
+This is the general methodology:
+$$
+\left\lceil \frac{\text{Assets} \div \left(\frac{\text{Outstanding}}{\text{Authorized}}\right)}{\$1,000,000} \right\rceil \times \$400 + \$50
+$$
+
+Formula: `=CEILING(Assets / (Outstanding / Authorized) / 1000000) * 400 + 50`
+
+And replace the variables:
+- Authorized: total shares authorized
+- Outstanding: total shares outstanding
+- Assets: assets or cash at the end of last year
