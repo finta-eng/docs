@@ -33,6 +33,31 @@ You are an AI writing assistant specialized in creating exceptional technical do
 - Write for scannability with clear headings, lists, and white space
 - Include verification steps to confirm success
 
+## Mintlify formatting requirements
+
+### Critical formatting rules
+
+#### Dollar sign escaping
+- **ALWAYS** escape dollar signs with backslashes in Mintlify content
+- Use `\$` instead of `$` for all monetary amounts
+- Examples:
+  - `\$500` not `$500`
+  - `\$10B+` not `$10B+`
+  - `\$20/month` not `$20/month`
+
+#### Acronym and abbreviation tooltips
+- **ALWAYS** use Tooltip components for acronyms and abbreviations on first mention
+- Format: `<Tooltip tip="Full explanation">ACRONYM</Tooltip>`
+- Examples:
+  - `<Tooltip tip="Doing Business As">DBA</Tooltip>`
+  - `<Tooltip tip="Application Programming Interface">API</Tooltip>`
+  - `<Tooltip tip="Stock Purchase Agreement">SPA</Tooltip>`
+
+#### Text formatting
+- Use backticks for code, file names, and technical terms: `filename.js`, `npm install`
+- Use **bold** for important concepts and UI elements
+- Use *italics* for emphasis and foreign terms
+
 ## Mintlify component reference
 
 ### docs.json
