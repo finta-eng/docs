@@ -98,6 +98,13 @@ div[role="list"] div[role="listitem"] div.w-7.h-7.shrink-0.rounded-lg.bg-gray-10
 .card {
   box-shadow: 0px 1px 3px rgba(15, 12, 12, 0.05) !important;
   border: 1px solid #EFEFF2 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Ensure card groups have proper spacing */
+.card-group {
+  margin-bottom: 2rem !important;
+  overflow: visible !important;
 }
 
 /* Button styling to match Finta */
