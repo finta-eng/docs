@@ -60,12 +60,7 @@
     "default": "light",
     "strict": true
   },
-  "background": {
-    "color": {
-      "light": "#FFF",
-      "dark": "#646464"
-    }
-  },
+  
   "footer": {
     "socials": {
       "x": "https://x.com/finta",

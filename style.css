@@ -1,188 +1,198 @@
-/* Custom CSS for Mintlify documentation */
+/* Minimal global link styling overrides */
 
-/* Global font family */
-body, 
-h1, h2, h3, h4, h5, h6,
-p, div, a, li, td, th, input, button, textarea {
-  font-family: 'ABC Oracle', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-}
-
-/* Callout blocks */
-div.callout {
-  border-radius: 8px;
-}
-
-/* Left nav bar highlighted page*/
-a.rounded-xl.bg-primary\/10.text-primary {
-    border-radius: 8px;
-  }
-
-/* Left nav bar width */
-#sidebar {
-    width: 16rem !important; 
-}
-
-/* Set custom border radius for rounded elements */
-.rounded-2xl {
-  border-radius: 8px !important;
-}
-
-/* Input container styles */
-.input-container {
-  position: relative;
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-/* Base styles for all inputs */
-.calculator-input {
-  height: 26px;
-  border-radius: 4px;
-  border: 1px solid #E7E7E9;
-  font-size: 12px;
-  box-shadow: 0 1px 2px rgba(15, 12, 12, 0.05);
-  background-color: white;
-  text-align: right;
-}
-
-/* Placeholder color */
-.calculator-input::placeholder {
-  color: #718096;
-}
-
-/* Output columns display */
-.qualified-percent-display,
-.rd-expenses-display,
-.credit-percent-display {
-  font-size: 12px !important;
-  color: #000000 !important;
-}
-
-/* Focus styles */
-.calculator-input:focus {
-  outline: none;
-  border-color: #2679F3;
-  box-shadow: 0 0 0 2px rgba(38, 121, 243, 0.08);
-}
-
-/* Remove spinner buttons from number inputs */
-.calculator-input::-webkit-outer-spin-button,
-.calculator-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-.calculator-input[type=number] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-/* Body text color to match Finta */
-/* p, li {
-  color: #0F0C0C;
-} */
-
-/* Change color and increase size of all Mintlify Step titles */
-div[role="list"] div[role="listitem"] p.mt-2.font-semibold.prose {
-  color: #2679F3 !important;
-  font-size: 18px !important; /* Increased from default size */
-}
-
-div[role="list"] div[role="listitem"] div.w-7.h-7.shrink-0.rounded-lg.bg-gray-100 {
-  background-color: #EAF1FE !important;
-  color: #2679F3 !important;
-}
-
-/* Card shadows to match Finta's style */
-.card {
-  box-shadow: 0px 1px 3px rgba(15, 12, 12, 0.05) !important;
-  border: 1px solid #EFEFF2 !important;
-  margin-bottom: 1rem !important;
-}
-
-/* Ensure card groups have proper spacing */
-.card-group {
-  margin-bottom: 2rem !important;
-  overflow: visible !important;
-}
-
-/* Button styling to match Finta */
-.primary-button {
-  border-radius: 8px !important;
-  background-color: #2679F3 !important;
-  box-shadow: 0px 1px 2px rgba(15, 12, 12, 0.05) !important;
-  border: none !important;
-  transition: transform 0.2s, box-shadow 0.2s !important;
-}
-
-.primary-button:hover {
-  transform: translateY(-1px) !important;
-  box-shadow: 0px 4px 8px rgba(15, 12, 12, 0.08) !important;
-}
-
-/* Finta link styling - simpler approach */
-.prose a, .prose a:link, .prose a:visited, 
-.content a, .content a:link, .content a:visited {
-  color: #2679F3 !important;
-  text-decoration: none !important;
-  font-weight: normal !important;
+/* Links: normal weight, brand blue, no underline until hover (exclude card anchors) */
+.prose a:not(.card), .prose a:link:not(.card), .prose a:visited:not(.card),
+.content a:not(.card), .content a:link:not(.card), .content a:visited:not(.card) {
+  color: #2679F3 !important;          /* brand blue */
+  font-weight: normal !important;      /* no bold */
+  text-decoration: none !important;    /* no underline by default */
+  text-decoration-thickness: 1px !important; /* prevent thick underline */
+  text-underline-offset: 2px !important;
+  background: none !important;         /* neutralize Mintlify gradient underline */
   background-image: none !important;
-  background: none !important;
-  border-bottom: none !important;
   box-shadow: none !important;
 }
 
-/* Only apply underline on hover */
-.prose a:hover, .content a:hover {
-  color: #215BB9 !important;
+.prose a:not(.card):hover, .content a:not(.card):hover,
+.prose a:not(.card):focus, .content a:not(.card):focus {
+  color: #2679F3 !important;           /* keep same color on hover */
   text-decoration: underline !important;
+  text-decoration-thickness: 1px !important; /* keep underline thin */
+  text-underline-offset: 2px !important;
 }
 
-/* Navigation: Blue highlight (#EAF1FE bg, #2679F3 text) */
-.nav-item.active, .sidebar-item.active {
-  background-color: #EAF1FE !important;
+/* Card links: no underline on hover/focus or at rest */
+a.card,
+a.card:hover,
+a.card:focus {
+  text-decoration: none !important;
+  text-decoration-thickness: 0 !important;
+}
+
+/* Global corner radius: 6px for common UI surfaces (keeps rounded-full intact) */
+:root { --corner-radius: 6px; }
+
+/* Removed broad rounded-* overrides to avoid unintended rounding on components */
+
+/* Limit radius scope */
+a.card, .card { border-radius: var(--corner-radius); }
+
+/* Ensure bold inside links doesn't force bold/black appearance */
+.prose a strong, .prose strong a,
+.content a strong, .content strong a {
+  font-weight: normal !important;
   color: #2679F3 !important;
-  font-weight: 500 !important;
 }
 
-/* Code block styling to match Finta */
-pre, code, .code-block {
-  border-radius: 8px !important;
-  background-color: #F5F5F7 !important;
-  border: 1px solid #EFEFF2 !important;
-  font-family: 'IBM Plex Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+/* Prevent CardGroup/card contents and shadows from being clipped */
+.card-group,
+[data-component="CardGroup"] {
+  overflow: visible !important;
 }
 
-inline-code, code:not(pre code) {
-  background-color: #F5F5F7 !important;
+.card {
+  overflow: visible !important;
+}
+
+/* Ensure card content isn't truncated or faded */
+.card [data-component-part="card-content-container"] {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.card [data-component-part="card-content"] {
+  display: block !important;
+  max-height: none !important;
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+  overflow: visible !important;
+}
+
+.card [data-component-part="card-content"]::after {
+  content: none !important; /* remove any fade overlay if present */
+}
+
+/* Kill any gradient fade/masks applied by theme */
+a.card,
+.card [data-component-part="card-content-container"],
+.card [data-component-part="card-content"] {
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  background-image: none !important;
+}
+
+/* Also remove possible ::after overlays on container and card */
+.card [data-component-part="card-content-container"]::after,
+a.card::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Also ensure no ::before overlays remain */
+a.card::before,
+.card [data-component-part="card-content-container"]::before,
+.card [data-component-part="card-content"]::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Raise content above any remaining overlays */
+.card [data-component-part="card-content-container"],
+.card [data-component-part="card-content"] {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Left nav: remove active background shading, keep blue text */
+#sidebar a.bg-primary\/10,
+#sidebar a.dark\:bg-primary-light\/10,
+#sidebar .nav-item.active,
+#sidebar .sidebar-item.active {
+  background-color: transparent !important;
+}
+
+/* Left nav: non-active hover should have no bg, text/icon turn black */
+#sidebar a:hover {
+  background-color: transparent !important;
+}
+#sidebar a:hover:not(.text-primary):not(.dark\:text-primary-light) {
   color: #000000 !important;
-  padding: 0.2em 0.4em !important;
-  border-radius: 4px !important;
-  font-size: 0.9em !important;
+}
+#sidebar a:hover:not(.text-primary):not(.dark\:text-primary-light) svg {
+  background-color: #61646C !important;
 }
 
-/* Fix accordion text selection - correct selectors for your site */
-div[role="button"] div.mt-2.mb-4.mx-6.overflow-x-auto {
-  cursor: text !important;
+/* Global font family: Inter for all UI text (exclude code blocks) */
+body,
+h1, h2, h3, h4, h5, h6,
+p, div, a, span, small, strong, em,
+ul, ol, li,
+label, input, button, textarea, select,
+table, thead, tbody, tfoot, tr, th, td,
+dt, dd, blockquote {
+  font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
-div[role="button"] div.mt-2.mb-4.mx-6.overflow-x-auto * {
-  cursor: text !important;
-  user-select: text !important;
+/* Tabs: remove card-like rounding and borders */
+[role="tablist"] [role="tab"] {
+  border-radius: 0 !important;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
-/* Keep accordion button clickable */
-div[role="button"] button {
-  cursor: pointer !important;
+/* Text hyperlinks with explicit .link class: never underline (even on hover) */
+.prose a.link, .content a.link {
+  text-decoration: none;
+}
+.prose a.link:hover, .content a.link:hover,
+.prose a.link:focus, .content a.link:focus {
+  text-decoration: none;
 }
 
-/* Force warning callout text to inherit color */
-[data-type="warning"] *,
-.warning *,
-div[class*="warning"] * {
-  color: inherit !important;
+/* Show help cursor for inline tooltips in text */
+.prose [data-component-part="tooltip-trigger"],
+.prose [data-tooltip],
+.prose [aria-describedby*="tooltip"],
+.prose abbr[title] {
+  cursor: help;
 }
 
+/* Text hyperlinks with explicit .link class: force no underline (normal/hover/focus) */
+.prose a.link, .content a.link {
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+.prose a.link:hover, .content a.link:hover,
+.prose a.link:focus, .content a.link:focus {
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  box-shadow: none !important;
+}
+
+/* Inline text tooltips: show help cursor */
+.prose [data-component-part="tooltip-trigger"],
+.prose .tooltip-trigger,
+.prose [data-tooltip],
+.prose [aria-describedby*="tooltip"],
+.prose abbr[title] {
+  cursor: help !important;
+}
+
+/* Tooltips: apply 6px radius across Mintlify tooltip variants */
+.prose [role="tooltip"],
+.prose [data-component-part="tooltip"],
+.prose [data-component-part="tooltip-content"],
+.prose .tooltip,
+.prose .mintlify-tooltip {
+  border-radius: 6px;
+}
+
+/* Normalize large rounded corners to 6px */
+:root { --rounded-2xl: 6px; }
+.rounded-2xl { border-radius: 6px; }
 
 
