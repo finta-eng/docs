@@ -122,6 +122,40 @@ a.card::before,
   background-color: #61646C !important;
 }
 
+/* Mobile/overlay nav: ensure active item is bold */
+/* (Remove previous non-bold override) */
+
+/* Left nav: (reverted) keep default active font-weight */
+
+/* Active nav item (all sizes): bold text + slightly larger icon */
+#sidebar a.bg-primary\/10,
+#sidebar a.dark\:bg-primary-light\/10,
+#sidebar a[aria-current="page"],
+#navigation-items a.bg-primary\/10,
+#navigation-items a.dark\:bg-primary-light\/10,
+#navigation-items a[aria-current="page"] {
+  font-weight: 600 !important; /* bold */
+}
+
+/* Nav icons: reserve constant space, enlarge active via scale to avoid text shift */
+#sidebar a svg,
+#navigation-items a svg {
+  width: 18px !important;   /* constant box */
+  height: 18px !important;
+  transform: scale(0.89);   /* visually ~16px by default */
+  transform-origin: center;
+  transition: transform 120ms ease;
+}
+
+#sidebar a.bg-primary\/10 svg,
+#sidebar a.dark\:bg-primary-light\/10 svg,
+#sidebar a[aria-current="page"] svg,
+#navigation-items a.bg-primary\/10 svg,
+#navigation-items a.dark\:bg-primary-light\/10 svg,
+#navigation-items a[aria-current="page"] svg {
+  transform: scale(1);      /* visually larger when active */
+}
+
 /* Global font family: Inter for all UI text (exclude code blocks) */
 body,
 h1, h2, h3, h4, h5, h6,
