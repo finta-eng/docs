@@ -1,0 +1,113 @@
+---
+title: "Cap table basics"
+sidebarTitle: "Cap table"
+icon: "chart-pie"
+---
+
+## What is equity
+
+Equity refers to ownership of your startup. In the beginning, you own 100%. As you bring on co-founders, employees, and investors, you sell or give out portions of that ownership. While your ownership will shrink over time, the company’s overall value will also grow. 
+
+For example, you might own 100% of a \$1 million company today, but in the future, you'd probably want to own 10% of a \$1 billion company, which is worth \$100 million.
+
+Equity also matters for incentive and control. In the early days, your startup likely can’t compete on cash compensation for hiring employees. What should motivate early team members to join is a small chance at an outsized outcome, which comes from equity. 
+
+In the early days, you won’t be able to match big company salaries. What convinces great people to join is the chance that their equity could turn into something life-changing. 
+
+<Tip>Think of equity as a compensation tool when you’re cash-strapped early on.</Tip>
+
+Equity also determines who has decision-making power, because ownership is what drives voting rights and board control.
+
+## What is a cap table
+
+A <Tooltip tip="capitalization table">cap table</Tooltip> is a list of current and future holders and how much they own in your company.
+
+At incorporation, your cap table is just you and your co-founder(s). However, as you begin hiring, raising funding, and issuing equity, the cap table becomes your source of truth. It answers key questions, such as: How many shares are issued? What percentage does each party own? How much is reserved for future hires? What’s been granted? What’s still available? 
+
+## What are share count definitions
+
+We'll use this typical cap table at incorporation for reference below.
+
+|  |  | Authorized # |  | Outstanding # | Outstanding % |
+| --- | --- | ---: | --- | ---: | ---: |
+| Founder A |  | 4,000,000 |  | 4,000,000 | 50% |
+| Founder B |  | 4,000,000 |  | 4,000,000 | 50% |
+| Options pool |  | 2,000,000 |  |  |  |
+| **Total** |  | **10,000,000** |  | **8,000,000** | **100%** |
+
+### Authorized shares
+
+This is the total allowed number of shares your company can issue. Typically, companies incorporate with 10,000,000.  It can be modified later through board and shareholder approvals. 
+
+### Issued shares
+
+This is the number of shares that have been granted. It includes shares that are still actively held (outstanding), and shares that were repurchased by the company or canceled (no longer outstanding). Typically, companies incorporate with 8,000,000 to be split among cofounders.
+
+For example, if a company issued 8,000,000 to cofounders, and one founder left, canceling their 4,000,000 shares. The issued shares amount is still 8,000,000.
+
+### Outstanding shares
+
+This is a subset of issued shares that are currently active today. In other words, issued shares that have not been bought back or canceled. Typically, at incorporation, this is the same 8,000,000 issued shares.
+
+For example, if a company issued 8,000,000 shares to cofounders, and one founder left, canceling their 4,000,000 shares, then the outstanding shares amount is now 4,000,000.
+
+### Options pool
+
+This is a portion of authorized shares that the company reserves for future employee equity grants. These shares are not yet issued. They’re set aside to be granted as stock options, which may later be exercised and converted into issued and outstanding shares. Typically, at incorporation, this is 2,000,000.
+
+### Fully diluted shares
+
+This is a what-if view that assumes all available options are exercised and converted to equity to understand the maximum dilution impact. 
+
+From the same example above, say you’ve granted 500,000 stock options to an employee. These are not shares yet, just the option to buy shares in the future.
+
+|  |  | Authorized # |  | Outstanding # | Outstanding % |  | Fully Diluted # | Fully Diluted % |
+| --- | --- | ---: | --- | ---: | ---: | --- | ---: | ---: |
+| Founder A |  | 4,000,000 |  | 4,000,000 | 50% |  | 4,000,000 | 47% |
+| Founder B |  | 4,000,000 |  | 4,000,000 | 50% |  | 4,000,000 | 47% |
+| Options pool |  | 2,000,000 |  |  |  |  | 500,000 | 6% |
+| **Total** |  | **10,000,000** |  | **8,000,000** | **100%** |  | **8,500,000** | **100%** |
+
+In a fully diluted view, you assume all options are exercised and converted into shares. That means the total share count would increase from 8,000,000 to 8,500,000, showing what ownership would look like if every outstanding option and convertible security turned into actual shares.
+
+Just looking at the outstanding ownership %, the two cofounders own 50% each. However, if 500,000 options are issued to employees, their fully diluted ownership is actually 47% each, while the employee who owns 500,000 shares has a fully diluted ownership of 6%.
+
+## What are equity types
+
+### Stock
+
+**Common stock** is typically what founders and employees get. It comes with normal voting rights and represents standard ownership. 
+
+**Preferred stock** is typically what investors get in priced fundraising rounds. It includes special rights like liquidation preferences (i.e., they get paid first in an exit).
+
+### Convertible securities
+
+These aren’t shares yet, but they give you the right to convert them into stock or pay for stock later. They still count when modeling ownership and dilution. 
+
+**Stock options** give someone the *option*, not the obligation to buy common stock later at a set price (the strike price).
+
+They usually follow a 1-year cliff and a 4-year vesting schedule, meaning, if you’re granted 48 options, you don’t receive any until month 12, when the first 12 vest all at once. After that, you get 1 option every month for the remaining 36 months.
+
+Options give you a claim to the upside without downside risk. If it's worthless, you don't lose anything. But if it's worth a lot of money, you "call" the option to exercise when gains are already confirmed.
+
+**<Tooltip tip="restricted stock units">RSUs</Tooltip>** are promises to give you stock in the future, usually after time-based vesting and a liquidity event (like an acquisition or IPO).
+
+With RSUs, the recipient doesn’t have to pay a strike price since the stock is delivered automatically when it vests. However, they’re taxed as income when they vest.
+
+That’s why they’re typically used only at late-stage or public companies where employees can actually sell shares to cover the tax bill. 
+
+**Warrants** are like stock options, but they’re typically given to investors or advisors. For example, in exchange for providing a loan, signing a partnership, or investing early. They give the holder the right to buy shares later at a fixed price, just like an option, and are counted as fully diluted in the cap table. 
+
+### SAFEs
+
+SAFEs, invented by YC, are exactly what the name says: Simple Agreement for Future Equity. They’re designed to help founders raise money quickly, without needing a lead investor or negotiating complex terms. Instead of getting shares right away, investors get the right to convert their investment into equity later, usually when the company raises a priced round.
+
+<Tip>SAFE stands for Simple Agreement for *Future* Equity. Therefore, SAFE investors do not own any company shares yet.</Tip>
+
+## What cap table software should I use
+
+You don't need cap table software if you've just incorporated, since the ownership structure is extremely simple and doesn't require tracking. 
+
+You can still get away without a cap table if you raised funding with SAFEs, but the second you start hiring, issuing equity, or raising a priced round, you'll need software to track vesting schedules, 409A valuations, option grant certificates, and more. We recommend something like [Clerky](https://www.clerky.com/), [Pulley](https://pulley.com/), or [Carta](https://carta.com/).
+
+

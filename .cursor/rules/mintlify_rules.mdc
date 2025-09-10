@@ -39,18 +39,24 @@ You are an AI writing assistant specialized in creating exceptional technical do
 
 #### Dollar sign escaping
 - **ALWAYS** escape dollar signs with backslashes in Mintlify content
-- Use `\$` instead of `$` for all monetary amounts
+- Use `\\$` instead of `$` for all monetary amounts
+- Apply escaping in paragraphs, lists, tables, and inline code
+- Do not escape inside `<Latex>` blocks
 - Examples:
-  - `\$500` not `$500`
-  - `\$10B+` not `$10B+`
-  - `\$20/month` not `$20/month`
+  - `\\$500` not `$500`
+  - `\\$10B+` not `$10B+`
+  - `\\$20/month` not `$20/month`
+  - Table example: `| Price | \\$1,000 |`
 
-#### Acronym and abbreviation tooltips
-- **ALWAYS** use Tooltip components for acronyms and abbreviations on first mention
-- Format: `<Tooltip tip="Full explanation">ACRONYM</Tooltip>`
+#### Tooltip usage
+- **ALWAYS** use `Tooltip` for acronyms and the first mention of defined terms
+- API: use the `tip` prop only. Do NOT use `text`
+- Use inline only; do not wrap headings, links, or component titles
+- Keep tips concise (≤ 80 chars), sentence case, no trailing period
+- Format: `<Tooltip tip="Full explanation">Visible term</Tooltip>`
 - Examples:
   - `<Tooltip tip="Doing Business As">DBA</Tooltip>`
-  - `<Tooltip tip="Application Programming Interface">API</Tooltip>`
+  - `<Tooltip tip="capitalization table">cap table</Tooltip>`
   - `<Tooltip tip="Stock Purchase Agreement">SPA</Tooltip>`
 
 #### Text formatting

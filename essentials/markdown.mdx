@@ -86,3 +86,19 @@ Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex compo
 ```md
 <Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
 ```
+
+## Tooltips
+
+Use the Tooltip component to define terms inline. Wrap the visible term and provide an explanation via the `tip` prop.
+
+```md
+<Tooltip tip="capitalization table">cap table</Tooltip>
+```
+
+## Dollar signs in Markdown
+
+Escape dollar signs with a backslash to avoid unintended LaTeX parsing, including inside tables.
+
+```md
+You might own \$1 million today and \$100 million later.
+```

@@ -27,6 +27,12 @@
         ]
       },
       {
+        "group": "Equity",
+        "pages": [
+          "captable"
+        ]
+      },
+      {
         "group": "Expenses",
         "pages": [
           "receipts",
