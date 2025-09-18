@@ -79,10 +79,12 @@
   },
   "seo": {
     "metatags": {
-      "og:title": "Finta Guide: Startup Finances Playbook",
       "og:description": "The Finta Guide is the go-to playbook for startup founders on taxes, accounting, and finances. Get expert-backed advice, step-by-step guides, and best practices to stay compliant and make smarter financial decisions.",
-      "og:image": "/images/hero.png",
-      "og:logo": "/images/logo_square.jpg"
+      "og:image": "/images/SEO.png",
+      "og:site_name": "Finta Guide",
+      "og:type": "website",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@finta"
     }
   }
 }
